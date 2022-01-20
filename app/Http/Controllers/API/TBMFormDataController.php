@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\RunnerCollection;
+use App\Http\Resources\RunnerResource;
 use App\Models\TBMFormLastRunner;
 use App\Models\TBMMeeting;
 use App\Models\TBMRace;
+use App\Models\TBMRunner;
 use Illuminate\Http\Request;
 
 class TBMFormDataController extends Controller
@@ -20,9 +23,16 @@ class TBMFormDataController extends Controller
     public function getFromData($runner_id){
 
 
-        $data = TBMRace::find(2);
+        $data = TBMRunner::find($runner_id);
 
-        dd($data->tbm_meeting);
+        return new RunnerResource($data);
+
+        // dd($data->tbm_form_last_runners);
+        // // $response_data = {
+        // //     ''
+        // // }
+
+        // return response()->json($data,200);
 
     }
 
