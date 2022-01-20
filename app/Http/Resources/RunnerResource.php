@@ -15,7 +15,6 @@ class RunnerResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id'=>$this->id,
             'runner_name'=>$this->name,
             'age'=>'age',
             'sex'=>'sex',

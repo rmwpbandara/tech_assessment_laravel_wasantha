@@ -10,6 +10,7 @@ use App\Models\TBMMeeting;
 use App\Models\TBMRace;
 use App\Models\TBMRunner;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class TBMFormDataController extends Controller
 {
@@ -23,16 +24,14 @@ class TBMFormDataController extends Controller
     public function getFromData($runner_id){
 
 
-        $data = TBMRunner::find($runner_id);
+        $runner_data = TBMRunner::find($runner_id);
 
-        return new RunnerResource($data);
+        return response()->json([
+            "success"=> true,
+            "data" => new RunnerResource($runner_data),
+            "status"=> Response::HTTP_OK
+        ]);
 
-        // dd($data->tbm_form_last_runners);
-        // // $response_data = {
-        // //     ''
-        // // }
-
-        // return response()->json($data,200);
 
     }
 
