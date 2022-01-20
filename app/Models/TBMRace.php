@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class TBMRace extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'external_id',
+        'name'
+    ];
+
+   public function tdm_runners()
+   {
+       return $this->hasMany('App\Models\TBMRunner');
+   }
+
+   public function tdm_meeting()
+   {
+       return $this->belongsTo('App\Models\TBMMeeting');
+   }
 }

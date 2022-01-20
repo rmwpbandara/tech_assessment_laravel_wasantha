@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class TBMMeeting extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'external_id',
+        'name'
+    ];
+
+   public function tdm_races()
+   {
+       return $this->hasMany('App\Models\TBMRace');
+   }
+
 }
