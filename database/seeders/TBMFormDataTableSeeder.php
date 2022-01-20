@@ -20,6 +20,7 @@ class TBMFormDataTableSeeder extends Seeder
                 'name' => 'Name '.$count,
                 'status' => 'Status '.$count,
                 't_b_m_runner_id' => $count,
+                'created_at' => date("Y-m-d H:i:s")
             ]);
             $count++;
         }

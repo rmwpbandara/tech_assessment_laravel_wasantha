@@ -20,6 +20,7 @@ class TBMRunnerTableSeeder extends Seeder
                 'external_id' => 't_b_m_runner_ext_id'.$count ,
                 'name' => 'Runner Name '.$count,
                 't_b_m_race_id' => $count,
+                'created_at' => date("Y-m-d H:i:s")
             ]);
             $count++;
         }

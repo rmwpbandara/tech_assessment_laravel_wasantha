@@ -19,6 +19,7 @@ class TBMFormLastRunnerTableSeeder extends Seeder
             DB::table('t_b_m_form_last_runners')->insert([
                 'name' => 'Name '.$count,
                 't_b_m_runner_id' => $count,
+                'created_at' => date("Y-m-d H:i:s")
             ]);
             $count++;
         }
