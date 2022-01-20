@@ -14,7 +14,7 @@ class TBMFormLastRunner extends Model
         'name'
     ];
 
-    public function tdm_runner()
+    public function tbm_runner()
     {
         return $this->belongsTo('App\Models\TBMRunner');
     }

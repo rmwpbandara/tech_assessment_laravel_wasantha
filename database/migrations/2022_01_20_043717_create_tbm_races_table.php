@@ -13,12 +13,12 @@ class CreateTBMRacesTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbm_races', function (Blueprint $table) {
+        Schema::create('t_b_m_races', function (Blueprint $table) {
             $table->id();
             $table->string('external_id');
             $table->string('name');
-            $table->unsignedBigInteger('tbm_meeting_id');
-            $table->foreign('tbm_meeting_id')->references('id')->on('tbm_meetings')->onDelete('cascade');
+            $table->unsignedBigInteger('t_b_m_meeting_id');
+            $table->foreign('t_b_m_meeting_id')->references('id')->on('t_b_m_meetings')->onDelete('cascade');
 
             $table->timestamps();
         });
@@ -31,6 +31,6 @@ class CreateTBMRacesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbm_races');
+        Schema::dropIfExists('t_b_m_races');
     }
 }

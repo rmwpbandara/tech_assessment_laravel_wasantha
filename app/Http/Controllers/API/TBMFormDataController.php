@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Models\TBMFormLastRunner;
+use App\Models\TBMMeeting;
 use Illuminate\Http\Request;
 
 class TBMFormDataController extends Controller
@@ -16,7 +18,10 @@ class TBMFormDataController extends Controller
     */
     public function getFromData($runner_id){
 
-        dd($runner_id);
+
+        $data = TBMMeeting::find(2);
+
+        dd($data);
 
     }
 

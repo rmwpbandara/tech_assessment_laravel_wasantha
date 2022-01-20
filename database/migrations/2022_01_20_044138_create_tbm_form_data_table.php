@@ -13,12 +13,12 @@ class CreateTBMFormDataTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbm_form_data', function (Blueprint $table) {
+        Schema::create('t_b_m_form_data', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('status');
-            $table->unsignedBigInteger('tbm_runner_id');
-            $table->foreign('tbm_runner_id')->references('id')->on('tbm_runners')->onDelete('cascade');
+            $table->unsignedBigInteger('t_b_m_runner_id');
+            $table->foreign('t_b_m_runner_id')->references('id')->on('t_b_m_runners')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateTBMFormDataTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbm_form_data');
+        Schema::dropIfExists('t_b_m_form_data');
     }
 }

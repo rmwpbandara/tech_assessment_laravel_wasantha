@@ -16,10 +16,10 @@ class TBMFormDataTableSeeder extends Seeder
     {
         $count = 1;
         while($count < 10){
-            DB::table('tbm_form_data')->insert([
+            DB::table('t_b_m_form_data')->insert([
                 'name' => 'Name '.$count,
                 'status' => 'Status '.$count,
-                'tbm_runner_id' => $count,
+                't_b_m_runner_id' => $count,
             ]);
             $count++;
         }

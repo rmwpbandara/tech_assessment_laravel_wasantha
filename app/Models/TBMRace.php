@@ -15,13 +15,13 @@ class TBMRace extends Model
         'meeting_id'
     ];
 
-   public function tdm_runners()
+   public function tbm_runners()
    {
        return $this->hasMany('App\Models\TBMRunner');
    }
 
-   public function tdm_meeting()
+   public function tbm_meeting()
    {
-       return $this->belongsTo('App\Models\TBMMeeting');
+       return $this->belongsTo(TBMMeeting::class);
    }
 }

@@ -14,9 +14,9 @@ class TBMMeeting extends Model
         'name'
     ];
 
-   public function tdm_races()
+   public function tbm_races()
    {
-       return $this->hasMany('App\Models\TBMRace');
+       return $this->hasMany(TBMRace::class);
    }
 
 }

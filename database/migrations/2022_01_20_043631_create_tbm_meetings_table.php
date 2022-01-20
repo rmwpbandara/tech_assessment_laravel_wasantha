@@ -13,7 +13,7 @@ class CreateTBMMeetingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbm_meetings', function (Blueprint $table) {
+        Schema::create('t_b_m_meetings', function (Blueprint $table) {
             $table->id();
             $table->string('external_id');
             $table->string('name');
@@ -28,6 +28,6 @@ class CreateTBMMeetingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbm_meetings');
+        Schema::dropIfExists('t_b_m_meetings');
     }
 }

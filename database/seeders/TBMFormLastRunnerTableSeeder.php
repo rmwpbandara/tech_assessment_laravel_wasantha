@@ -16,9 +16,9 @@ class TBMFormLastRunnerTableSeeder extends Seeder
     {
         $count = 1;
         while($count < 10){
-            DB::table('tbm_form_last_runners')->insert([
+            DB::table('t_b_m_form_last_runners')->insert([
                 'name' => 'Name '.$count,
-                'tbm_runner_id' => $count,
+                't_b_m_runner_id' => $count,
             ]);
             $count++;
         }

@@ -14,17 +14,17 @@ class TBMRunner extends Model
         'name'
     ];
 
-   public function tdm_form_last_runners()
+   public function tbm_form_last_runners()
    {
        return $this->hasMany('App\Models\TBMFormLastRunner');
    }
 
-   public function tdm_form_datas()
+   public function tbm_form_datas()
    {
        return $this->hasMany('App\Models\TBMFormData');
    }
 
-   public function tdm_race()
+   public function tbm_race()
    {
        return $this->belongsTo('App\Models\TBMRace');
    }

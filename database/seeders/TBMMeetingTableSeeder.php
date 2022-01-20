@@ -19,8 +19,8 @@ class TBMMeetingTableSeeder extends Seeder
         // TBMMeeting::factory()->count(20)->create();
         $count = 1;
         while($count < 10){
-            DB::table('tbm_meetings')->insert([
-                'external_id' => 'tbm_meeting_ext_id'.$count ,
+            DB::table('t_b_m_meetings')->insert([
+                'external_id' => 't_b_m_meeting_ext_id'.$count ,
                 'name' => 'Meeting Name '.$count
             ]);
             $count++;

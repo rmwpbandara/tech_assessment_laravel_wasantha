@@ -16,10 +16,10 @@ class TBMRaceTableSeeder extends Seeder
     {
         $count = 1;
         while($count < 10){
-            DB::table('tbm_races')->insert([
-                'external_id' => 'tbm_race_ext_id'.$count ,
+            DB::table('t_b_m_races')->insert([
+                'external_id' => 't_b_m_race_ext_id'.$count ,
                 'name' => 'Race Name '.$count,
-                'tbm_meeting_id' => $count,
+                't_b_m_meeting_id' => $count,
             ]);
             $count++;
         }
