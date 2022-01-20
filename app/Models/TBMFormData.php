@@ -16,6 +16,6 @@ class TBMFormData extends Model
 
     public function tbm_runner()
     {
-        return $this->belongsTo('App\Models\TBMRunner');
+        return $this->belongsTo(TBMRunner::class,'id');
     }
 }

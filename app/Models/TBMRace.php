@@ -22,6 +22,6 @@ class TBMRace extends Model
 
    public function tbm_meeting()
    {
-       return $this->belongsTo(TBMMeeting::class);
+       return $this->belongsTo(TBMMeeting::class,'id');
    }
 }
