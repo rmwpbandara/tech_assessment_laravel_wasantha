@@ -11,7 +11,8 @@ class TBMRace extends Model
 
     protected $fillable = [
         'external_id',
-        'name'
+        'name',
+        'meeting_id'
     ];
 
    public function tdm_runners()
